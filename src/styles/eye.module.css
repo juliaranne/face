@@ -5,7 +5,7 @@
   height: 34px;
 }
 
-.checkbox {
+.input {
   opacity: 0;
 }
 
@@ -29,4 +29,21 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
+  outline: 4px solid brown;
+}
+
+.slider::after {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  border-radius: 10px;
+  left: 9px;
+  bottom: 4px;
+  background-color: green;
+}
+
+.input:checked + .slider::after,
+.input:checked + .slider::before {
+  transform: translateX(26px);
 }
